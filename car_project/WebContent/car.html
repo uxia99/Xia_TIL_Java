@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Car Information</title>
+  <style>
+    body {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.4)), url("img/ferrari_image.jpg");
+      background-size: cover;
+      background-position: center center;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+    
+    .navbar {
+      width: 200px;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 20px;
+      text-align: center;
+      display: flex;
+ 	  flex-direction: column;
+ 	  justify-content: center;
+ 	  align-items: center;
+    }
+    
+    .navbar button {
+      display: block;
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      color: #000;
+      font-weight: bold;
+      font-size: 16px;
+      margin: 30px;
+      cursor: pointer;
+      outline: none;
+    }
+    
+    
+    .form-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .form {
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    
+    .form input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    
+    .form button[type="submit"] {
+      background-color: #BFFFFB;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <button onclick="location.href='carread.html'">차량 정보 조회</button>
+      <button onclick="location.href='carupdate.html'">차량 정보 수정</button>
+      <button onclick="location.href='cardelete.html'">차량 정보 삭제</button>
+    </div>
+    <div class="form-container">
+      <div class="form">
+        <h2>차량 정보 입력</h2>
+        <form action="car.jsp" method="get">
+          <input type="text" placeholder="VIN (Vehicle Identification Number)" required name="vin">
+          <input type="text" placeholder="Model" required name="model">
+          <input type="text" placeholder="Brand" required name="brand">
+          <input type="text" placeholder="Year" required name="year">
+          <button type="submit">제출</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

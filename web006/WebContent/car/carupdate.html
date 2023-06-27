@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Car Information Update</title>
+  <style>
+    body {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.4)), url("img/ferrari_image2.jpg");
+      background-size: cover;
+      background-position: center center;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .form {
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    
+    .form button[type="button"] {
+      background-color: #BFFFFB;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+    
+    .form input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid rgba(0, 0, 0, 0.2); /* 변경: 검정색 옅은 테두리 추가 */
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    
+    .form button[type="submit"] {
+      background-color: #BFFFFB;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form">
+      <h2>차량 정보 수정</h2>
+      <form action="carupdate.jsp" method="post">
+        <input type="text" placeholder="VIN (Vehicle Identification Number)" required name="vin">
+        <button type="button" onclick="fetchCarData()">VIN 확인</button>
+        <input type="text" placeholder="New Model" id="model" required name="model">
+        <input type="text" placeholder="New Brand" id="brand" required name="brand">
+        <input type="text" placeholder="New Year" id="year" required name="year">
+        <button type="submit">수정</button>
+      </form>
+    </div>
+  </div>
+  <script>
+  	function fetchCarData() {
+  		// VIN 값을 가져옴
+  		var vin = document.getElementsByName("vin")[0].value;
+  		
+  		// AJAX 요청을 통해 서버로 VIN 값을 전송하고 데이터를 받아옴 
+  		// 이후 받아온 데이터를 각각의 입력 필드에 설정 
+  		var modelInput = document.getElementById("model");
+  		var brandInput = document.getElementById("brand");
+  		var yearInput = document.getElementById("year");
+  		
+  		// Mock 데이터 설정 
+  		var MockData = {
+  				model : "New Model",
+  				brnad : "New Brand",
+  				year : "New Year"
+  		};
+  		
+  		modelInpt.value = mockData.model;
+  		brandInput.value = mockData.brnad;
+  		yearInput.value = mockYear.year;
+  		
+  	}
+  	
+  </script>
+</body>
+</html>

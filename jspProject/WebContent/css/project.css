@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+button {
+	color: green;
+	font: 45px 궁서 bold italic;
+	background: aqua;
+}
+input{
+	color: red;
+	font: 40px 굴림 bold;
+	background: white;
+}
+td {
+	/* width: 200px; */
+	font: 40px 궁서 bold;
+	background: yellow;
+	text-align: center;
+	width: 200px;
+}
+
+a {
+	text-decoration: none;
+	color: red;
+}
+li {
+	list-style: none;
+	float: left;
+	padding: 15px; /* 여백 */
+}
+
+li:nth-child(2n){
+	background: pink;
+}
+li:nth-child(2n+1){
+	background: orange;
+}
+
+#total {
+	width: 800px;
+	height: 800px;
+	color: blue;
+	font: 25px 궁서 bold;
+	background-image: url("../img/back.png");
+}
+
+#top {
+	width: 800px;
+	height: 100px;
+	background: lime;
+}
+
+#top2 {
+	color: yellow;
+	top: 5px;
+	right: 5px;
+	width: 250px;
+	height: 100px;
+	background: black;
+	position: fixed;
+	border-radius: 100px 10px;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	name = prompt("이름을 입력하시오") // name 앞에 var 생략 
+	alert("당신의 이름은 " + name + "입니다.")
+	
+	food = confirm("당신은 아침을 드셨습니까?") // true/false 
+	if (food) {
+		alert("배가 부르시겠군요")
+		location.href = "https://map.naver.com/v5/search/여의도한강공원/place/13416869?c=15,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+	} else {
+		alert("안됐군요")
+		location.href = "https://map.naver.com/v5/search/bbq/place/37667899?c=15,0,0,0,dh"
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

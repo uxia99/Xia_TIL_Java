@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type = "text/javascript" src = "js/out.js"></script>
+<script type="text/javascript" src="js/out2.js"></script>
+<script type = "text/javascript"> // 해당 html만 실행할 수 있는 SCRIPT 코드
+all()
+alert("html안에서 만들어짐")
+function all2() {
+	console.log("저는 브라우저의 콘솔 로그입니다.")
+	document.write("저는 브라우저의 BODY부분에 작성됩니다.")
+}
+</script>
+</head>
+<body>
+	<button onclick="all2()">all2 함수 호출</button>
+	<button onclick="show()">보여주세요</button>
+	<button onclick="destory()">사라집니다</button>
+</body>
+</html>

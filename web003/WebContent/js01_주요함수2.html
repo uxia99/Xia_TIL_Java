@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	function login() {
+		id = document.getElementById("user").value // uxia
+		pw = document.getElementById("pw").value // 0812
+		if (id == "uxia" && pw == "0812") {
+			// alert("로그인 성공")
+			resultTag = document.getElementById("result") // <div id = "result"></div>
+			resultTag.innerHTML = "<span style = 'color : blue'>로그인 성공</span><br>" + 
+								  "<img src = 'img/success.JPG' width = '200' height = '200'>"
+		} else {
+			// alert("로그인 실패")
+			resultTag = document.getElementById("result") // <div id = "result"></div>
+			resultTag.innerHTML = "<span style = 'color : red'>로그인 실패</span><br>" + 
+								  "<img src = 'img/fail.JPG' width = '200' height = '200'>"
+		}
+	} // login 함수
+	
+	function age() {
+		// 의사코드(PseudoCode, 수도코드)
+		// 입력 값 가지고와서 
+		year = document.getElementById('year').value
+		// 숫자로 변경 후 
+		let year2 = parseInt(year)
+		// 나이 계산
+		let age = 2023 - year2
+		// 출력 
+		alert("your age : " + age)
+	} // age 함수 
+	
+	function rec() {
+		// 제어문
+		// 순차문, 조건문, 반복문
+		// 순차문 : 입력 -> 처리 -> 출력
+		// 입력
+		w = document.getElementById('w').value
+		h = document.getElementById('h').value
+
+		// 처리
+		let result = parseFloat(w) * parseFloat(h) // parseFloat 소수로 바꿔주는 연산자 
+		
+		// 출력 
+		alert("사각형의 면적 : " + result)
+		
+	} // rec 함수 
+	
+</script>
+
+</head>
+<body>
+	ID : <input id = "user" value = "uxia"> <br>
+	PW : <input id = "pw" value = "0812"> <br>
+	<button onclick = "login()">로그인</button>
+	<hr>
+	<div id = "result" style = "background : lightgrey">
+		
+	</div>
+	<hr>
+	태어난 연도 : <input id = "year" value = "2000"> <br>
+	<button onclick = "age()">나이 계산 처리</button>
+	<hr>
+	<div id = "result2" style = "font : lightblue"></div>
+	가로 : <input id = "w" value = "11.11"> <br>
+	세로 : <input id = "h" value = "22.22"> <br>
+	<button onclick = "rec()">사각형의 면적 입력</button>
+	<hr>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+body { /* 컨트롤 + / - 자동주석, 태그선택! */
+	background: #037BFC;
+}
+
+button {
+	background: #18DE02;
+}
+
+.t1 { /* .은 클래스 선택!, 여러개선택!  */
+	background: yellow;
+	width: 150px;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+<form action="delete2.jsp" method="get">
+<!-- http://localhost:8898/web00/delete2.jsp?no=100 -->
+<!-- http의 header(요청주소+Get방식으로 넘어가는 데이터) -->
+<table border="1">
+			<tr>
+				<td class="t1">삭제할 번호 :</td>
+				<td><input name="no"></td>
+			</tr>
+			<tr>
+				<td colspan="2" class="t1">
+					<button id="b2">게시판 삭제할 no 데이터 전송</button>
+				</td>
+			</tr>
+		</table>
+
+</form>
+</body>
+</html>
+
+
+
+
+
+

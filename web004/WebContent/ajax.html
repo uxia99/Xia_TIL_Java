@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- 기상청 AJAX -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<!-- Cmd + / : 자동 주석 -->
+	<!-- Latest compiled and minified CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
+	</script>
+	<script type = "text/javascript">
+	
+		// body 부분을 먼저 읽어온 후 입력값으로 넣은 함수 부분을 실행 
+	
+		$(function() {
+			$('#b1').click(function() {
+				alert("b1 클릭됨")
+				$.ajax({
+					url : "ok.html", 
+					success : function(x) {
+						alert('AJAX 성공. 받은 데이터는 "' + x + '"')
+						$('#d1').html(x)
+					}
+				})
+				
+			}) // b1 
+			
+			$('#b2').click(function() {
+				alert("b2 클릭됨")
+				$.ajax({
+					url : "weather.html",
+					success : function(x) {
+						alert('AJAX 성공. 받은 데이터는 "' + x + '"')
+						$('#d2').html(x)
+					}
+				})
+				
+			}) // b2
+			
+			$('#b3').click(function() {
+				alert("b3 클릭됨")
+				$.ajax({
+					url : "tour.html",
+					success : function(x) {
+						alert('AJAX 성공. 받은 데이터는 "' + x + '"')
+						$('#d3').html(x)
+					},
+					
+					error : function(x2) {
+						alert(x2)
+					}
+					
+				})
+				
+			}) // b3
+			
+		}) // $
+		
+	</script>
+</head>
+<body>
+	<button id="b1">AjaxTest 받아오기</button>
+	<button id="b2">기상청정보 받아오기</button>
+    <button id="b3">여행정보 받아오기</button>
+    <hr> 
+    <div id="d1" style="width: 400px; height: 100px; background: lime;"></div>
+    <div id="d2" style="width: 400px; height: 100px; background: yellow;"></div>
+    <div id="d3" style="width: 400px; height: 100px; background: pink;"></div>
+</body>
+</html>

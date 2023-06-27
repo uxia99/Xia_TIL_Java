@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	
+	function go() {
+		site = prompt("접속하고싶은 포털은 무엇인가요?")
+		if (site == 'naver') {
+			location.href = "http://www.naver.com"
+		} else if (site == 'daum') {
+			location.href = "http://www.daum.net"
+		} else {
+			location.href = "https://www.google.co.kr"
+		} // else
+	} // go() 
+	
+	function check() {
+		pw1 = prompt("pw 입력")
+		pw2 = prompt("pw 재입력")
+		
+		if (pw1 == pw2) {
+			alert("비밀번호 일치")
+		} else {
+			alert("비밀번호 불일치")
+		}
+	}
+	
+</script>
+</head>
+<body>
+	<button onclick = "go()">포털사이트</button>
+	<button onclick = "check()">비밀번호 확인</button>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	function me() {
+		name = document.getElementById("name").value
+		com = document.getElementById("com").value
+		role = document.getElementById("role").value
+		gender = document.getElementById("gender").value
+		
+		resultTag = document.getElementById("result")
+		text = com + "에 " + role + "으로 있는 " + name + "입니다.<br>" 
+		
+		if (gender == "여자") {
+			image = "<img src = img/woman.JPG width = 300 height = 300>"
+		} else {
+			image = "<img src = img/man.JPG width = 300 height = 300>"
+		}
+		
+		resultTag.innerHTML = text + image
+	
+	}
+	
+	// 가방 첫 번째
+	
+	function bag() {
+		best = document.getElementById("best").value
+		resultTag = document.getElementById("result")
+		
+		if (best == "휴대폰") {
+			image = "<img src = img/iphone.jpg width = 300 height = 300>"
+		} else if (best == "시계") {
+			image = "<img src = img/applewatch.jpg width = 300 height = 300>"
+		} else {
+			image = "<img src = img/etc.jpg width = 300 height = 300>"
+		}
+		resultTag.innerHTML = image
+	}
+	
+	// 가방 두 번째 
+	
+	function bag2() {
+		sec = document.getElementById("sec").value
+		if (sec == "시계") {
+			location.href = "https://www.rolex.com"
+		} else {
+			location.href = "https://www.dior.com/ko_kr"
+		}
+		
+	}
+	
+	
+</script>
+
+</head>
+<body>
+	이름 : <input id = "name" value = "유시아"><br>
+	회사 : <input id = "com" value = "NAVER"><br>
+	직책 : <input id = "role" value = "인턴"><br>
+	성별 : <input id = "gender" value = "여자"><br>
+	<button onclick = "me()">내 정보 확인</button><hr color = "lightgrey">
+	<div id = "result" style = "background : lightgrey; width : 500; height : 300;"></div>
+	
+	<hr color = lightblue>
+	가방 안에 들어있는 물건 중 가장 중요한 것 입력 : <input id = "best" value = "휴대폰"><br>
+	가방 안에 들어있는 물건 중 두번째로 중요한 것 입력 : <input id = "sec" value = "시계"><br>
+	<button onclick = "bag()">제일 중요한 것 확인</button><br>
+	<button onclick = "bag2()">두번째 중요한 것 확인</button><br>
+	
+</body>
+</html>

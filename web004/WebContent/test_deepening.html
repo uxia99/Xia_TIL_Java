@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<!-- Cmd + / : 자동 주석 -->
+	<!-- Latest compiled and minified CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
+	</script>
+	<script type = "text/javascript">
+	
+		// body 부분을 먼저 읽어온 후 입력값으로 넣은 함수 부분을 실행 
+		
+		$(function() {
+			$('#btn1').click(function() {
+				let keywordValue = $('#keyword').val()
+				let result = $('#result')
+				location.href = "https://kin.naver.com/search/list.naver?query=" + keywordValue
+			})
+			
+			$('#btn2').click(function() {
+				let keywordValue = $('#keyword2').val()
+				let result = $('#result')
+				location.href = "https://shopinghow.kakao.com/search/" + keywordValue
+			})
+		})
+		
+	</script>	
+</head>
+<body>
+	<div class = "input-group mb-3 input-group-lg">
+		<span class = "input-group-text">산, 바다, 강 중 어느 곳을 가고싶나요?</span>
+		<input id = "keyword" class = "form-control" value = "바다">
+	</div>
+	
+	<hr style = "color : red; width : 300px;">
+	<button class = "mt-4 p-3 bg-primary text-white rounded" id = "btn1">가고싶은 곳 검색</button>
+	<hr>
+	
+	<div class = "input-group mb-3 input-group-lg">
+		<span class = "input-group-text">구매하고싶은 물품은 무엇인가요?</span>
+		<input id = "keyword2" class = "form-control" value = "지바겐">
+	</div>
+	<hr style = "color : red; width : 300px;">
+	<button class = "mt-4 p-3 bg-primary text-white rounded" id = "btn2">사고싶은 물건 검색</button>
+</body>
+</html>
